@@ -1,5 +1,9 @@
+/* Add this at the top to include Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 body {
   background-color: #353935;
+  font-family: 'Nunito', sans-serif; /* Apply Nunito to the whole document */
 }
 
 * {
