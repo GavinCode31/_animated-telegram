@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Google</title>
-    <link rel="stylesheet" href="index.css">
-    <script>
-      // On page load, we will inject content into an iframe and hide the parent URL
-      window.onload = function() {
-        // Create an iframe dynamically
-        var iframe = document.createElement('iframe');
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.border = "none";
-        
-        // Inject the iframe into the body
-        document.body.appendChild(iframe);
-        
-        // Load your content into the iframe
-        var doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-          <!DOCTYPE html>
-          <html lang="en">
-            <head>
-              <title>Google</title>
-              <link rel="stylesheet" href="index.css">
-            </head>
-            <body>
-              <h1>Welcome to Google</h1>
-              <p>This is the content inside the iframe.</p>
-            </body>
-          </html>
-        `);
-        doc.close();
-        
-        // Set the parent page URL to about:blank using history.replaceState
-        window.history.replaceState({}, "", "about:blank");
-      };
-    </script>
   </head>
   <body>
-    <h1>This content won't be shown, only the iframe's content will appear.</h1>
+    
   </body>
 </html>
